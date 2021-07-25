@@ -8,6 +8,10 @@ describe("<Main/>", () => {
       screen.queryByRole("heading", { name: /NextJS Boilerplate/i })
     ).toBeInTheDocument();
   });
+  it("snapshot is match", () => {
+    const { container } = render(<Main />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
   it("right background color", () => {
     const { container } = render(<Main />);
     expect(container.firstChild).toHaveStyle({ "background-color": "#06092b" });
