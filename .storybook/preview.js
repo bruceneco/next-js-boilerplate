@@ -10,9 +10,11 @@ export const parameters = {
     }
   }
 };
-addDecorator((Story) => (
-  <>
-    <GlobalStyles />
-    {Story()}
-  </>
-));
+export const decorators = [
+  (Story) => (
+    <>
+      <GlobalStyles />
+      <Story />
+    </>
+  )
+];
