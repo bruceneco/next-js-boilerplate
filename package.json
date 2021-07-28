@@ -47,7 +47,7 @@
     "typescript": "^4.3.5"
   },
   "lint-staged": {
-    "*.ts(x)": [
+    "srsc/**/*": [
       "npm run lint -- --fix",
       "npm run test -- --bail --findRelatedTests --coverage=false"
     ]
